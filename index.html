@@ -8,12 +8,15 @@
 <meta property="og:title" content="Meet Erik Ofloy, your Merrill account executive">
 <meta property="og:description" content="Your new point person at Merrill Manufacturing for the Southeast U.S.">
 <meta property="og:image" content="headshot.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#102E66">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0e2a47; --blue:#1d6fb8; --sky:#e8f2fb; --water:#cfe4f6;
-    --warm:#d98b2b; --ink:#1b2430; --muted:#5b6776; --line:#e3e8ee; --bg:#fbfaf7; --card:#ffffff;
+    --navy:#102E66; --blue:#1f4d99; --sky:#eaf0f8; --water:#d3dff0; --red:#E92A2C; --redtext:#c81e21;
+    --warm:var(--red); --ink:#1b2430; --muted:#5b6776; --line:#e3e8ee; --bg:#fbfaf7; --card:#ffffff;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -21,24 +24,25 @@
   img{max-width:100%;display:block}
   a{color:var(--blue)}
   .wrap{max-width:980px;margin:0 auto;padding:0 20px}
-  h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;color:var(--navy);margin:0 0 .5em}
+  h1,h2,h3{font-family:Archivo,Arial,sans-serif;line-height:1.15;color:var(--navy);margin:0 0 .5em}
   h2{font-size:clamp(1.6rem,4vw,2.2rem)}
   h3{font-size:1.15rem}
-  .eyebrow{font:600 .78rem/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--warm);margin-bottom:12px}
+  .eyebrow{font:600 .78rem/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--redtext);margin-bottom:12px}
   section{padding:64px 0}
   .muted{color:var(--muted)}
 
   /* top bar */
-  .bar{background:var(--navy);color:#fff}
+  .bar{background:#fff;border-bottom:4px solid var(--red)}
   .bar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:12px;padding-bottom:12px;gap:12px}
-  .brand{font:700 1rem/1 Fraunces,serif;letter-spacing:.02em}
+  .brand{font:700 1rem/1 Archivo,Arial,sans-serif;letter-spacing:.02em}
   .brand small{display:block;font:500 .7rem/1.3 Inter,sans-serif;opacity:.75;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
-  .bar a.call{color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;border:1px solid rgba(255,255,255,.35);padding:8px 14px;border-radius:999px;white-space:nowrap}
+  .bar .logo{height:44px;width:auto}
+  .bar a.call{color:#fff;background:var(--red);text-decoration:none;font-weight:600;font-size:.92rem;padding:8px 14px;border-radius:999px;white-space:nowrap}
 
   /* hero */
   .hero{background:linear-gradient(180deg,var(--sky),var(--bg));padding:56px 0 48px}
   .hero .wrap{display:grid;grid-template-columns:260px 1fr;gap:44px;align-items:center}
-  .portrait{width:260px;height:260px;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 12px 30px rgba(14,42,71,.18);background:var(--water);display:grid;place-items:center;font:700 4rem Fraunces,serif;color:var(--navy)}
+  .portrait{width:260px;height:260px;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 12px 30px rgba(14,42,71,.18);background:var(--water);display:grid;place-items:center;font:700 4rem Archivo,Arial,sans-serif;color:var(--navy)}
   .portrait img{width:100%;height:100%;object-fit:cover}
   .hero h1{font-size:clamp(2.2rem,6vw,3.4rem)}
   .hero p.lead{font-size:1.15rem;color:#33404f;max-width:34em}
@@ -53,7 +57,7 @@
   .frame{position:relative;aspect-ratio:9/16;width:100%;max-width:340px;margin:0 auto;border-radius:18px;overflow:hidden;background:var(--navy);box-shadow:0 10px 30px rgba(14,42,71,.15)}
   .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
   .frame .soon{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#dce9f6;padding:20px}
-  .frame .soon b{display:block;font:600 1.4rem Fraunces,serif;color:#fff;margin-bottom:6px}
+  .frame .soon b{display:block;font:600 1.4rem Archivo,Arial,sans-serif;color:#fff;margin-bottom:6px}
 
   .vgrid{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:center}
   .vtext h2{font-size:clamp(1.6rem,4vw,2.2rem)}
@@ -69,14 +73,14 @@
   .promises{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:26px}
   .card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px}
-  .card .n{font:700 1.6rem Fraunces,serif;color:var(--warm);line-height:1;margin-bottom:8px}
+  .card .n{font:700 1.6rem Archivo,Arial,sans-serif;color:var(--warm);line-height:1;margin-bottom:8px}
   .card p{margin:0;color:#3a4654}
 
   /* transition */
   .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
   .box{border-radius:16px;padding:22px 24px}
   .box.same{background:var(--sky)}
-  .box.new{background:#fdf2e3}
+  .box.new{background:#fdeeee}
   .box ul{margin:8px 0 0;padding-left:20px}
   .box li{margin:6px 0}
 
@@ -85,10 +89,10 @@
   .timeline{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:t}
   .timeline li{position:relative;padding:20px 18px 18px;border-radius:16px;background:var(--sky);counter-increment:t}
   .timeline li::before{content:counter(t);position:absolute;top:-14px;left:18px;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;font:600 .9rem/28px Inter,sans-serif;text-align:center}
-  .timeline b{display:block;font:600 1.05rem Fraunces,serif;color:var(--navy);margin-top:4px}
+  .timeline b{display:block;font:600 1.05rem Archivo,Arial,sans-serif;color:var(--navy);margin-top:4px}
   .timeline span{display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--warm);margin:4px 0 8px}
   .timeline p{margin:0;font-size:.95rem;color:#3a4654}
-  .grow{margin-top:28px;border-left:4px solid var(--warm);background:#fdf2e3;border-radius:0 16px 16px 0;padding:20px 24px}
+  .grow{margin-top:28px;border-left:4px solid var(--warm);background:#fdeeee;border-radius:0 16px 16px 0;padding:20px 24px}
   .grow p{margin:0}
 
   /* merrill */
@@ -96,12 +100,12 @@
   .merrill h2,.merrill h3{color:#fff}
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0}
   .stat{background:rgba(255,255,255,.07);border-radius:14px;padding:18px}
-  .stat b{display:block;font:700 1.9rem Fraunces,serif;color:#fff}
+  .stat b{display:block;font:700 1.9rem Archivo,Arial,sans-serif;color:#fff}
   .stat span{font-size:.88rem}
   .lines{columns:2;column-gap:28px;margin:10px 0 0;padding-left:18px}
   .lines li{margin:4px 0;break-inside:avoid}
   .merrill a{color:#9fcbf2}
-  .values{font-style:italic;color:#fff;font-family:Fraunces,serif;font-size:1.25rem;margin-top:26px}
+  .values{font-style:normal;color:#fff;font-family:Archivo,Arial,sans-serif;font-size:1.25rem;margin-top:26px}
 
   /* resources */
   .links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
@@ -135,13 +139,17 @@
     .lines{columns:1}
     .bar .brand small{display:none}
   }
+  h1,h2,h3,.stat b,.card .n,.timeline b,.values,.portrait,.frame .soon b{font-stretch:115%;letter-spacing:-.01em}
+  .stat{border-top:3px solid var(--red)}
+  footer{background:#fff;border-top:1px solid var(--line)}
+  footer .drop{height:28px;margin:0 auto 10px}
 </style>
 </head>
 <body>
 
 <div class="bar">
   <div class="wrap">
-    <div class="brand">Merrill Manufacturing<small>Storm Lake, Iowa · Since 1949</small></div>
+    <a href="https://merrillmfg.com" target="_blank" rel="noopener"><img class="logo" src="merrill-logo.png" alt="Merrill Manufacturing"></a>
     <a class="call" href="tel:+18473094703">Call Erik</a>
   </div>
 </div>
@@ -153,7 +161,7 @@
     <div>
       <div class="eyebrow">Your Merrill account executive · Southeast U.S.</div>
       <h1>Hi, I'm Erik.</h1>
-      <p class="lead">I'm the new point person for your account at Merrill Manufacturing. My job is simple: make sure you've got the hydrants, pitless units and well parts you need, when you need them, and that you always have a real person to call. Glad to meet you.</p>
+      <p class="lead">I'm the new point person for your account at Merrill Manufacturing. My job is simple: make sure you've got the hydrants and water well parts you need, when you need them, and that you always have a real person to call. Glad to meet you.</p>
       <div class="btns">
         <a class="btn primary" id="bookBtn" href="#contact">Book a quick call</a>
         <a class="btn ghost" href="erik-ofloy.vcf" download>Save my contact</a>
@@ -250,7 +258,7 @@
     <ol class="timeline">
       <li><b>Getting to know you</b><span>First few weeks</span><p>A real conversation about your business, your customers, and what's working and what isn't.</p></li>
       <li><b>Regular check-ins</b><span>About monthly</span><p>Stock levels, backorders, anything you need. Phone, text or email, whatever's easiest for you.</p></li>
-      <li><b>Quarterly business reviews</b><span>Every quarter</span><p>Thirty minutes looking at what you're buying, what's moving, and where we can help you grow.</p></li>
+      <li><b>Business reviews</b><span>Whenever it helps</span><p>Thirty minutes looking at what you're buying, what's moving, and where we can help you grow.</p></li>
       <li><b>Season planning</b><span>Ahead of busy season</span><p>So you're stocked before your customers come asking, not scrambling after.</p></li>
     </ol>
     <div class="grow">
@@ -276,7 +284,6 @@
     <ul class="lines">
       <li>Frost-proof yard hydrants (including no-lead and stainless)</li>
       <li>Frost-proof wall faucets</li>
-      <li>Pitless units, kits and adapters</li>
       <li>Well caps and well seals</li>
       <li>Tank tees and manifolds</li>
       <li>Tank floats and air volume controls</li>
@@ -301,7 +308,7 @@
       <a href="https://merrillmfg.com/pages/tools" target="_blank" rel="noopener"><b>Wholesaler Hub</b><span>Tools and resources for distributors</span></a>
       <a href="https://merrillmfg.com/pages/wholesaler-frequently-asked-questions" target="_blank" rel="noopener"><b>Wholesaler FAQs</b><span>Common questions answered</span></a>
       <a href="https://merrillmfg.com/pages/yard-hydrant-selector" target="_blank" rel="noopener"><b>Yard Hydrant Selector</b><span>Find the right hydrant fast</span></a>
-      <a href="https://merrillmfg.com/pages/pick-your-pitless" target="_blank" rel="noopener"><b>Pick Your Pitless</b><span>Match the right pitless unit</span></a>
+      <a href="https://merrillmfg.com/pages/documentation" target="_blank" rel="noopener"><b>Documents & spec sheets</b><span>Install guides and product specs</span></a>
       <a href="https://merrillmfg.com/pages/videos" target="_blank" rel="noopener"><b>Helpful videos</b><span>Install and repair how-tos</span></a>
     </div>
   </div>
@@ -318,7 +325,6 @@
         <dt>Direct</dt><dd><a href="tel:+17122663574">(712) 266-3574</a></dd>
         <dt>Email</dt><dd><a href="mailto:Erik.Ofloy@merrillmfg.com">Erik.Ofloy@merrillmfg.com</a></dd>
         <dt>Territory</dt><dd>Southeast United States</dd>
-        <dt>Hours</dt><dd>Mon–Fri, 9:30–5:00 Eastern</dd>
       </dl>
       <div class="stack">
         <a class="btn warm" id="bookBtn2" href="mailto:Erik.Ofloy@merrillmfg.com?subject=Let's%20set%20up%20a%20call">Book a call (phone or Teams)</a>
@@ -330,6 +336,7 @@
 </section>
 
 <footer>
+  <img class="drop" src="favicon.png" alt="">
   Erik Ofloy · Account Executive, Southeast U.S. · <a href="https://merrillmfg.com" target="_blank" rel="noopener">Merrill Manufacturing Company</a>, Storm Lake, Iowa
 </footer>
 
